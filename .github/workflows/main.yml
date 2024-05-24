@@ -1,6 +1,20 @@
-- name: Clean Tools Package Versions
-  uses: actions/delete-package-versions@v5
-  with:
-    package-name: 'io.krystal.tools'
-    package-type: 'maven'
-    min-versions-to-keep: 1
+name: Clean Packages
+on:
+  registry_package:
+    types: [published]
+jobs:
+  clean_packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clean Tools
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: 'io.krystal.tools'
+          package-type: 'maven'
+          min-versions-to-keep: 1
+      - name: Clean Frame
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: 'io.krystal.krystal-frame'
+          package-type: 'maven'
+          min-versions-to-keep: 1
