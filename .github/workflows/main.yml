@@ -1,8 +1,5 @@
 name: Clean Packages
-on:
-  workflow_dispatch:
-  registry_package:
-    types: [published]
+on: workflow_dispatch
 jobs:
   clean_packages:
     runs-on: ubuntu-latest
