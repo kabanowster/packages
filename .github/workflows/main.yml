@@ -1,5 +1,6 @@
 name: Clean Packages
 on:
+  workflow_dispatch:
   registry_package:
     types: [published]
 jobs:
