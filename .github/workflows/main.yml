@@ -4,9 +4,3 @@
     package-name: 'io.krystal.tools'
     package-type: 'maven'
     min-versions-to-keep: 1
-- name: Clean Frame Package Versions
-  uses: actions/delete-package-versions@v5
-  with:
-    package-name: 'io.krystal.krystal-frame'
-    package-type: 'maven'
-    min-versions-to-keep: 1
